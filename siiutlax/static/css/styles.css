@@ -1,6 +1,16 @@
-header{
-    background-color: aqua;
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+
 }
-.container{
-    background-color: green;
+h2 {
+    color: #4fc01b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    font-size: x-large;
+}
+body{
+    background-color: aqua;
 }
