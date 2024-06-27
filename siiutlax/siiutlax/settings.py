@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     'apps.home.apps.HomeConfig',
-    'apps.appPeriod.apps.periodConfig'
+    'apps.appPeriod.apps.AppperiodConfig'
 
 ]
 
