@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     'apps.home.apps.HomeConfig',
-    'apps.appAcademy.apps.academyConfig'
+    'apps.appAcademy.apps.AppacademyConfig'
 ]
 
 MIDDLEWARE = [
