@@ -13,8 +13,8 @@ class Category(models.Model):
 
 class Professor(User):
     numero_trabajador = models.IntegerField(9)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    title = models.CharField(max_length=100, null=True)
 
 
 class Students(User):
