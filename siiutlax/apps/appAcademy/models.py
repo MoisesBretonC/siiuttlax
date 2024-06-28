@@ -22,4 +22,4 @@ class Students(User):
 
 
 class Principal(User):
-    numero_trabajador = models.IntegerField() 
+    numero_trabajador = models.IntegerField()
