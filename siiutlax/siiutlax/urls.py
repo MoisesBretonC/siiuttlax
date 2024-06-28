@@ -24,4 +24,6 @@ urlpatterns = [
     path('Academy', include('apps.appAcademy.urls')),
     path('admin/', admin.site.urls),
     # simon
+
+    path('accounts/', include('django.contrib.auth.urls'))
 ]
