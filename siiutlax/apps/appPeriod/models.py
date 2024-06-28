@@ -1,6 +1,6 @@
 from django.db import models
 
-class Semester(models.Model):
+class Period(models.Model):
     PERIODS = [
         ('enero - abril','enero - abril'),
         ('mayo - agosto','mayo - agosto' ),
