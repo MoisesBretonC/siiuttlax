@@ -1,0 +1,22 @@
+{% extends 'style.html' %}
+
+{% import %}
+
+{% block title %} Formulario Login {% endblock %}
+
+{% block content %}
+<form>
+    <div class="mainForm">
+      <label class="form-label">Usuario</label>
+      <input type="email" class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input type="password" class="form-control">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
