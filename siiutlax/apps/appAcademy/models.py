@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 
 
 class Category(models.Model):
-    
+
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=15)
     description = models.TextField()
-    
+
 
 class Professor(User):
     numero_trabajador = models.IntegerField(9)
@@ -22,5 +22,4 @@ class Students(User):
 
 
 class Principal(User):
-    numero_trabajador = models.IntegerField() 
-    
+    numero_trabajador = models.IntegerField(12) 
