@@ -5,35 +5,29 @@ from apps.appPeriod.models import Semester
 
 
 class Career(models.Model):
-    Director = models.ForeignKey(   
+    LEVELS = (
+        ('TSU', 'Tecnica Superior Universitario'),
+        ('Ing', 'Ingenieria'),
+        ('Lic', 'Licenciatura'),
+        ('M', 'Maestria'),
+    )
+    director = models.ForeignKey(   
         Professor,
         on_delete=models.CASCADE,
         null=True,
         blank=True,
         verbose_name="Director"
     )
-
-    def __str__(self):
-        return f"{self.level}-{self.short_name}"
-    
-    class Meta:
-        verbose_name = "Estudiante"
-        verbose_name_plural = ""
-    
-    LEVELS = (
-        ('TSU', 'Tecnica Superior Universitario'),
-        ('Ing', 'Ingenieria'),
-        ('Lic', 'Licenciatura'),
-        ('M', 'Maestria'),
-
-    )
-
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=10)
     level = models.CharField(max_length=3, choices=LEVELS)
     year_plan = models.CharField(max_length=4)
     status = models.BooleanField(default=True)
 
+    def __str__(self):
+        return f"{self.level}-{self.short_name}"
+    
+   
 
 class Subject(models.Model):
     name = models.CharField(max_length=100)
