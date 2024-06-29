@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Period(models.Model):
     PERIODS = [
         ('enero - abril', 'enero - abril'),
