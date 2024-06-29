@@ -11,7 +11,7 @@ class Career(models.Model):
         ('Lic', 'Licenciatura'),
         ('M', 'Maestria'),
     )
-    director = models.ForeignKey(   
+    director = models.ForeignKey(
         Professor,
         on_delete=models.CASCADE,
         null=True,
@@ -26,7 +26,6 @@ class Career(models.Model):
 
     def __str__(self):
         return f"{self.level}-{self.short_name}"
-    
    
 
 class Subject(models.Model):
