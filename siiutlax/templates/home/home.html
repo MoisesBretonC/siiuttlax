@@ -8,4 +8,8 @@
 <p>Colaboracion de LuisJavier (tu padrino)</p>
 <p>Colaboracion de Moisés</p>
 
+<form action="{% url 'logout' %}" method="post" class="logout-form">
+    {% csrf_token %}
+    <input type="submit" value="salir">
+</form>
 {% endblock %}

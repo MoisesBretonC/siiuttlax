@@ -10,6 +10,7 @@ Description: Configuracion del Proyecto SIIUTTlax
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from django.conf.global_settings import LOGIN_REDIRECT_URL
 
 load_dotenv()
 
@@ -44,7 +45,9 @@ INSTALLED_APPS = [
 
     # Local Apps
     'apps.home.apps.HomeConfig',
-    'apps.appAcademy.apps.AppacademyConfig'
+    'apps.appAcademy.apps.AppacademyConfig',
+    'apps.appPeriod.apps.AppperiodConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -138,3 +141,10 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/accounts/login'
+
+
