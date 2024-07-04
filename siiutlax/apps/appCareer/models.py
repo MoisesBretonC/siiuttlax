@@ -1,3 +1,4 @@
+
 from django.db import models
 from apps.appAcademy.models import Professor
 from apps.appPeriod.models import Semester
