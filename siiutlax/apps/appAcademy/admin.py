@@ -16,7 +16,7 @@ class ProfesorAdmin(admin.ModelAdmin):
 
 
 
-@admin.register(Students)
+@admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     fields = ["username", "email", "first_name", "matricula"]
 
