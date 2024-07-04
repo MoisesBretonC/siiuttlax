@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Category, Professor, Students
+
+from .models import Category,Professor, Student
+
 
 # Register your models here.
 
@@ -13,6 +15,8 @@ class ProfesorAdmin(admin.ModelAdmin):
     fields = ["username", "email", "first_name", "category", "title", "numero_trabajador"]
 
 
+
 @admin.register(Students)
 class StudentAdmin(admin.ModelAdmin):
     fields = ["username", "email", "first_name", "matricula"]
+

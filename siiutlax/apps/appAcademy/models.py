@@ -32,8 +32,10 @@ class Professor(User):
 
 class Student(User):
     matricula = models.CharField(max_length=12)
+
     def __str__(self):
         return self.username
+
     class Meta:
         verbose_name = "Estudiante"
         verbose_name_plural = "Estudiantes"
