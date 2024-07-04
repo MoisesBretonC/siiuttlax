@@ -1,6 +1,6 @@
 from django.db import models
 from apps.appAcademy.models import Professor
-from apps.appPeriod.models import Semester
+from apps.appPeriod.models import Semester 
 # Create your models here.
 
 
@@ -38,3 +38,4 @@ class Subject(models.Model):
     total_hours = models.IntegerField()
     weekly_hours = models.IntegerField()
     file = models.CharField(max_length=100)
+
