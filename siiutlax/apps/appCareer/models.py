@@ -38,3 +38,7 @@ class Subject(models.Model):
     total_hours = models.IntegerField()
     weekly_hours = models.IntegerField()
     file = models.CharField(max_length=100)
+
+class Meta:
+    verbose_name = 'carrera'
+    verbose_name_plural = 'carreras'
