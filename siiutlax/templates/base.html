@@ -9,10 +9,24 @@
 </head>
     <body>
     <div class="container">
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% block content %}
+<<<<<<< HEAD
 
 
         {% endblock%}
     </div>
     </body>
     </html>
+=======
+        {% endblock %}
+    </div>
+</body>
+</html>
+>>>>>>> e52415ea47252c2d908443dbe20f1c0cd7d2ca3b
