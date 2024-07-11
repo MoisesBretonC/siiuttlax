@@ -2,6 +2,10 @@
 
 {% block title %} Home {% endblock %}
 
+    <link rel="stylesheet" href="">
+
+
+
 
 {% block content %}
 <h1>Sistema integral de Informacion de la UTTlax</h1>
@@ -9,4 +13,8 @@
 <p>Colaboracion de LuisJavier (tu padrino)</p>
 <p>Colaboracion de Moisés</p>
 
+<form action="{% url 'logout' %}" method="post" class="logout-form">
+    {% csrf_token %}
+    <input type="submit" value="salir">
+</form>
 {% endblock %}

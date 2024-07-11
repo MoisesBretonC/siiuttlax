@@ -10,6 +10,7 @@ Description: Configuracion del Proyecto SIIUTTlax
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from django.conf.global_settings import LOGIN_REDIRECT_URL
 
 load_dotenv()
 
@@ -141,4 +142,8 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-LOGIN_REDIRECT_URL = '/siiutlax/templates/login/login.html'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/accounts/login'
+
+

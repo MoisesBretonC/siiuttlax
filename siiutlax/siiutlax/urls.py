@@ -23,6 +23,8 @@ urlpatterns = [
     path('period/', include('apps.appPeriod.urls')),
     path('career/', include('apps.appCareer.urls')),
     path('academy/', include('apps.appAcademy.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    
     # simon
 
     path('accounts/', include('django.contrib.auth.urls'))
