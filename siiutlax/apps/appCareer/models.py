@@ -1,3 +1,4 @@
+
 from django.db import models
 from apps.appAcademy.models import Professor
 from apps.appPeriod.models import Semester 
@@ -38,4 +39,11 @@ class Subject(models.Model):
     total_hours = models.IntegerField()
     weekly_hours = models.IntegerField()
     file = models.CharField(max_length=100)
+
+
+# haciendo los metas    
+
+class Meta:
+    verbose_name = 'carrera'
+    verbose_name_plural = 'carreras'
 

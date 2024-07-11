@@ -17,7 +17,6 @@ class Category(models.Model):
             verbose_name = "Categoria"
             verbose_name_plural = "Categorias"
 
-
 class Professor(User):
     numero_trabajador = models.IntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
