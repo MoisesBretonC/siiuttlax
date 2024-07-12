@@ -2,19 +2,14 @@
 
 {% block title %} Home {% endblock %}
 
-    <link rel="stylesheet" href="">
-
-
-
-
 {% block content %}
-<h1>Bienvenido al Sistema integral de Informacion de la UTTlax</h1>
+<h1>Bienvenido al Sistema Integral de Información de la UTTlax</h1>
 <h2>SIIUTTlax</h2>
-<p>Colaboracion de LuisJavier (tu padrino)</p>
-<p>Colaboracion de Moisés</p>
+<p>Colaboración de Luis Javier (tu padrino)</p>
+<p>Colaboración de Moisés</p>
 
 <form action="{% url 'logout' %}" method="post" class="logout-form">
     {% csrf_token %}
-    <input type="submit" value="salir">
+    <input type="submit" value="Salir">
 </form>
 {% endblock %}
