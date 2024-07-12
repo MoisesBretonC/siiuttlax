@@ -25,7 +25,4 @@ urlpatterns = [
     path('academy/', include('apps.appAcademy.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     
-    # simon
-
-    path('accounts/', include('django.contrib.auth.urls'))
 ]
