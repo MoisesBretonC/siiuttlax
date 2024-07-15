@@ -14,6 +14,10 @@ from django.conf.global_settings import LOGIN_REDIRECT_URL
 
 load_dotenv()
 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -47,6 +51,7 @@ INSTALLED_APPS = [
     'apps.home.apps.HomeConfig',
     'apps.appAcademy.apps.AppacademyConfig',
     'apps.appPeriod.apps.AppperiodConfig',
+    'apps.appCareer.apps.AppcareerConfig',
 
 ]
 
@@ -147,3 +152,9 @@ LOGIN_REDIRECT_URL = '/home/'
 LOGOUT_REDIRECT_URL = '/'
 
 
+cloudinary.config( 
+    cloud_name = str(os.getenv('CLOUD_NAME')), 
+    api_key = str(os.getenv('API_KEY')), 
+    api_secret = str(os.getenv('API_SECRET')),
+    secure=True
+)

@@ -15,7 +15,7 @@
     {% csrf_token %}
     <input type="submit" value="Salir">
 </form>
-{ % else %}
+{% else %}
 <a href="{% url 'login' %}">Login</a>
 {% endif %}
 
