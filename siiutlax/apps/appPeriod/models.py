@@ -19,11 +19,8 @@ class Period(models.Model):
         verbose_name_plural = 'Cuatrimestre'
         ordering=['id']
 
+# estaba checando que vaina
 
 class Semester(models.Model):
     semester = models.CharField(max_length=2, verbose_name="Cuatrimestre")
-<<<<<<< HEAD
     semester_name = models.CharField(max_length=10,verbose_name="Cuatrimestre en Letra")
-=======
-    semester_name = models.CharField(max_length=10,verbose_name="Cuatrimestre en Letra")
->>>>>>> 2b60723b5be0a81f3b9312cb2559db2e4e204932
