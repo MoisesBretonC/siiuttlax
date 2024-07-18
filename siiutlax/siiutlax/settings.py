@@ -12,7 +12,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from django.conf.global_settings import LOGIN_REDIRECT_URL
 
+<<<<<<< HEAD
 from dotenv import load_dotenv
+=======
+>>>>>>> 2b60723b5be0a81f3b9312cb2559db2e4e204932
 load_dotenv(override=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -47,6 +50,7 @@ INSTALLED_APPS = [
     'apps.home.apps.HomeConfig',
     'apps.appAcademy.apps.AppacademyConfig',
     'apps.appPeriod.apps.AppperiodConfig',
+    'apps.appCareer.apps.AppcareerConfig',
 
 ]
 
@@ -146,5 +150,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/home/'
 LOGOUT_REDIRECT_URL = '/'
 
+<<<<<<< HEAD
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+=======
+
+# cloudinary.config( 
+#     cloud_name = str(os.getenv('CLOUD_NAME')), 
+#     api_key = str(os.getenv('API_KEY')), 
+#     api_secret = str(os.getenv('API_SECRET')),
+#     secure=True
+# )
+>>>>>>> 2b60723b5be0a81f3b9312cb2559db2e4e204932
