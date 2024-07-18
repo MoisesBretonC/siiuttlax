@@ -36,9 +36,13 @@ class Subject(models.Model):
         Semester,
         on_delete=models.CASCADE,
         default=1)
-    total_hours = models.IntegerField()
-    weekly_hours = models.IntegerField()
-    file = models.CharField(max_length=100)
+    total_hours = models.IntegerField(verbose_name="Horas totales", default=[0])
+    weekly_hours = models.IntegerField(verbose_name="Horas semanales", default=[0])
+    file = models.FileField(
+        verbose_name= "Archivo",
+        blank=True , null= True,
+        upload_to='asignaruras/',
+    )
 
 
 # haciendo los metas    
