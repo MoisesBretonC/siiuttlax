@@ -1,4 +1,3 @@
-
 from django.db import models
 from apps.appAcademy.models import Professor
 from apps.appPeriod.models import Semester 
@@ -36,9 +35,13 @@ class Subject(models.Model):
         Semester,
         on_delete=models.CASCADE,
         default=1)
-    total_hours = models.IntegerField()
-    weekly_hours = models.IntegerField()
-    file = models.CharField(max_length=100)
+    total_hours = models.IntegerField(verbose_name="Horas totales", default=[0])
+    weekly_hours = models.IntegerField(verbose_name="Horas semanales", default=[0])
+    file = models.FileField(
+        verbose_name= "Archivo",
+        blank=True , null= True,
+        upload_to='asignaruras/',
+    )
 
 
 # haciendo los metas    
@@ -46,4 +49,3 @@ class Subject(models.Model):
 class Meta:
     verbose_name = 'carrera'
     verbose_name_plural = 'carreras'
-
