@@ -6,6 +6,9 @@ from .forms import ProfesorForm,StudentForm
 
 def create_professor(request):
     form = ProfesorForm()
+    if request.method == 'POST':
+        form = ProfesorForm(request.POST)
+            
     return render(request,
                   'academy/create_professor.html',
                   {'form':form})
