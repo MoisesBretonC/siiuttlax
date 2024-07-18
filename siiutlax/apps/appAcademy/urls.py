@@ -7,7 +7,7 @@ urlpatterns = [
     path('student/create',
         views.create_student,
         name='create_student'),
-    path('profesor/create',
+    path('professor/create',
          views.create_professor,
          name='create_profesor'),
 ]

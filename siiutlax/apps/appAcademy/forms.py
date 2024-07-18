@@ -7,10 +7,11 @@ class ProfesorForm(forms.ModelForm):
 
     class Meta:
         model = Professor
-        fields = ['username', 'password', 'first_name','numero_trabajador']
+        fields = ['username', 'password', 'first_name','numero_trabajador','category']
         widgets = {
             'password': forms.PasswordInput(),
-            'numero_trabajador': forms.NumberInput()
+            'numero_trabajador': forms.NumberInput(),
+            'category': forms.Select()
         }
     
     
