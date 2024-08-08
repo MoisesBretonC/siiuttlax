@@ -1,8 +1,8 @@
 from django.db import models
 
-from apps.period.models import Semester,Period
-from apps.academy.models import Professor, Student
-from apps.career.models import Career
+from apps.appPeriod.models import Semester,Period
+from apps.appAcademy.models import Professor, Student
+from apps.appCareer.models import Career
 
 # Create your models here.
 class Group(models.Model):
