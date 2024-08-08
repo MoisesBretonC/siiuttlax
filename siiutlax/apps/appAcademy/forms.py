@@ -1,24 +1,12 @@
-from django.forms import Form,ModelForm
-from .models import Professor,Student
-from django import forms
 
+from django.forms import Form, ModelForms
 
-class ProfesorForm(forms.ModelForm):
+from .models import Professor, Student
 
-    class Meta:
-        model = Professor
-        fields = ['username', 'password', 'first_name','numero_trabajador','category']
-        widgets = {
-            'password': forms.PasswordInput(),
-            'numero_trabajador': forms.NumberInput(),
-            'category': forms.Select()
-        }
-    
-    
-class StudentForm(forms.ModelForm):
-    class Meta:
-        model = Student
-        fields = ['username', 'password', 'first_name','matricula']
-        widgets = {
-            'password': forms.PasswordInput()
-        }
+class ProfessorForm(ModelForm):
+    model = Professor
+    fields = '__all__'
+
+class StudentForm(ModelForm):
+    model = Student 
+    field = '__all__'
