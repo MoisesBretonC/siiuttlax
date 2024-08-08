@@ -12,8 +12,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 from django.conf.global_settings import LOGIN_REDIRECT_URL
 
-load_dotenv()
-
+from dotenv import load_dotenv
+load_dotenv(override=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'apps.appAcademy.apps.AppacademyConfig',
     'apps.appPeriod.apps.AppperiodConfig',
     'apps.appCareer.apps.AppcareerConfig',
+
     'apps.group.apps.GroupConfig',
+
 
 
 ]
@@ -149,4 +151,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/home/'
 LOGOUT_REDIRECT_URL = '/'
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
